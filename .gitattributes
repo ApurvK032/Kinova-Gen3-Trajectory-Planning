@@ -1,2 +1,2 @@
 *.py linguist-language=Python
-CMakeLists.txt linguist-vendored
+CMakeLists.txt linguist-language=CMake
