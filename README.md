@@ -131,6 +131,12 @@ The system plans and executes 5 distinct motions:
 | T4 | Custom Pose 1 | Custom Pose 2 | Incremental movement (+0.25, +0.2 rad) |
 | T5 | Custom Pose 2 | Home | Return to starting position |
 
+
+## Demo
+
+![Trajectory Planning](images/Screenshot%201.png)
+![Execution](images/Screenshot%202.png)
+
 ## Node Architecture
 
 ### trajectory_collection.py
