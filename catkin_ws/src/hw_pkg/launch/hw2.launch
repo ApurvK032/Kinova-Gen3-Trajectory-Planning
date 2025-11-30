@@ -1,0 +1,15 @@
+<launch>
+    <!-- Launch TurtleBot3 Gazebo -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch"/>
+    
+    <!-- Launch teleop with remapped topic -->
+    <node pkg="turtlebot3_teleop" type="turtlebot3_teleop_key" name="turtlebot3_teleop" output="screen">
+        <remap from="/cmd_vel" to="/teleop_cmd_vel"/>
+    </node>
+    
+    <!-- Launch obstacle avoidance -->
+    <node pkg="hw_pkg" type="obstacle_avoidance.py" name="obstacle_avoidance" output="screen"/>
+    
+    <!-- Launch obstacle detection -->
+    <node pkg="hw_pkg" type="obstacle_detection.py" name="obstacle_detection" output="screen"/>
+</launch>
